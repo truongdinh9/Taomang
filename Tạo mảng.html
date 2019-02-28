@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo mảng</title>
+</head>
+<body>
+<h1> Tạo mảng </h1>
+<input type="text" id="ooo">
+<button onclick="ado()">ADD</button>
+<button onclick="dis()">Display</button>
+<br>
+<p id="hienthi"></p>
+<script>
+    var a = [];
+
+    function ado() {
+        a.push(ooo.value);
+        ooo.value = "";
+    }
+
+    function dis() {
+        hienthi.value = ""
+        for (let i = 0; i < a.length; i++) {
+            document.getElementById("hienthi").innerHTML += "Element " + i + " : " + a[i] + "<br/>";
+            ooo.value = ""
+        }
+
+    }
+</script>
+</body>
+</html>
